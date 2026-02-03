@@ -14,6 +14,42 @@ A Health Spending Account (also called a Health Care Spending Account or HCSA) l
 npm install canada-hsa-calculator
 ```
 
+## CLI
+
+```bash
+# Install globally
+npm install -g canada-hsa-calculator
+
+# Calculate savings: hsa-calc <income> <expenses> <province>
+hsa-calc 100000 3000 ON
+
+#   Canadian HSA Tax Savings Calculator
+#   ===================================
+#
+#   Province:           Ontario (ON)
+#   Annual Income:      $100,000.00
+#   Medical Expenses:   $3,000.00
+#
+#   Tax Rates
+#   ---------
+#   Federal marginal:   20.50%
+#   Provincial marginal:  9.15%
+#   Combined marginal:  29.65%
+#
+#   Comparison
+#   ----------
+#   Without HSA:        $4,264.39 pre-tax income needed
+#   With HSA:           $3,360.00 total business cost
+#
+#   SAVINGS:            $904.39/year
+
+# Custom admin fee and plan fee
+hsa-calc 85000 5000 BC --admin-fee 5 --plan-fee 450
+
+# JSON output for scripting
+hsa-calc 120000 2000 AB --json
+```
+
 ## Usage
 
 ```ts
