@@ -1,0 +1,43 @@
+{
+  "name": "canada-hsa-calculator",
+  "version": "1.0.0",
+  "description": "Canadian Health Spending Account (HSA) tax savings calculator with 2025 federal and provincial tax brackets",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "hsa",
+    "health-spending-account",
+    "canada",
+    "tax-calculator",
+    "tax-savings",
+    "canadian-taxes",
+    "small-business",
+    "medical-expenses",
+    "tax-brackets",
+    "cra"
+  ],
+  "author": "Frontier HSA (https://www.frontierhsa.ca)",
+  "license": "MIT",
+  "homepage": "https://www.frontierhsa.ca/calculator",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/noqcks/canada-hsa-calculator"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.0",
+    "vitest": "^2.0.0"
+  }
+}
