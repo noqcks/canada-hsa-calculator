@@ -11,14 +11,14 @@ A Health Spending Account (also called a Health Care Spending Account or HCSA) l
 ## Install
 
 ```bash
-npm install canada-hsa-calculator
+npm install @frontierhsa/canada-hsa-calculator
 ```
 
 ## CLI
 
 ```bash
 # Install globally
-npm install -g canada-hsa-calculator
+npm install -g @frontierhsa/canada-hsa-calculator
 
 # Calculate savings: hsa-calc <income> <expenses> <province>
 hsa-calc 100000 3000 ON
@@ -53,7 +53,7 @@ hsa-calc 120000 2000 AB --json
 ## Usage
 
 ```ts
-import { calculate } from "canada-hsa-calculator";
+import { calculate } from "@frontierhsa/canada-hsa-calculator";
 
 const result = calculate({
   annualIncome: 100000,
@@ -108,7 +108,7 @@ import {
   effectiveFederalTaxRate,
   effectiveProvincialTaxRate,
   PROVINCES,
-} from "canada-hsa-calculator";
+} from "@frontierhsa/canada-hsa-calculator";
 
 // Marginal rates (rate on the next dollar earned)
 marginalFederalTaxRate(100000);                    // 0.205
@@ -122,7 +122,7 @@ effectiveProvincialTaxRate(100000, PROVINCES.ON);   // 0.0698
 ### Tax Bracket Data
 
 ```ts
-import { FEDERAL_TAX_BRACKETS, PROVINCES } from "canada-hsa-calculator";
+import { FEDERAL_TAX_BRACKETS, PROVINCES } from "@frontierhsa/canada-hsa-calculator";
 
 // 2025 federal brackets
 console.log(FEDERAL_TAX_BRACKETS);

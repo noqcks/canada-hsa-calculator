@@ -1,5 +1,5 @@
 {
-  "name": "canada-hsa-calculator",
+  "name": "@frontierhsa/canada-hsa-calculator",
   "version": "1.0.0",
   "description": "Canadian Health Spending Account (HSA) tax savings calculator with 2025 federal and provincial tax brackets",
   "main": "dist/index.js",

@@ -92,7 +92,7 @@ export function marginalProvincialTaxRate(
  *
  * @example
  * ```ts
- * import { calculate } from "canada-hsa-calculator";
+ * import { calculate } from "@frontierhsa/canada-hsa-calculator";
  *
  * const result = calculate({
  *   annualIncome: 100000,
