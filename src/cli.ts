@@ -5,7 +5,7 @@ import { ProvinceCode, PROVINCES } from "./types";
 
 const VALID_PROVINCES = Object.keys(PROVINCES) as ProvinceCode[];
 
-function usage(): never {
+function usage(): void {
   console.log(`
 canada-hsa-calculator — Canadian HSA tax savings calculator
 https://www.frontierhsa.ca/calculator
@@ -45,10 +45,11 @@ function main() {
 
   if (args.length === 0 || args.includes("--help") || args.includes("-h")) {
     usage();
+    return;
   }
 
   // Parse positional args
-  const positional = args.filter(a => !a.startsWith("--"));
+  const positional = args.filter((a: string) => !a.startsWith("--"));
   if (positional.length < 3) {
     console.error("Error: requires 3 arguments: <income> <expenses> <province>");
     console.error("Run 'hsa-calc --help' for usage.");
